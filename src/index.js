@@ -1,4 +1,4 @@
-/**
+/*
  * LightningChartJS example that showcases usage of BoxSeries and RangeSeries to show some made-up statistical graphs.
  */
 // Import LightningChartJS
