@@ -94,7 +94,6 @@ const chart = lightningChart().ChartXY()
     .setTitle('Probability distribution + Simulated accumulation and BoxSeries')
     // Set auto-cursor mode to 'onHover'
     .setAutoCursorMode(AutoCursorModes.onHover)
-    // DAutoCursorModeslAutoCursorModes
     .setAutoCursor((cursor) => cursor
         .setResultTableAutoTextStyle(false)
         .setTickMarkerXAutoTextStyle(false)
