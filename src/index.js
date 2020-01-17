@@ -29,7 +29,7 @@ const palette = ColorPalettes.arction(10)
 const colors = [2, 4, 0, 0].map(palette)
 const Style = (color) => {
     const solidFill = new SolidFill({ color })
-    const opaqueFill = new SolidFill({ color: color.setA(60) })
+    const opaqueFill = new SolidFill({ color: color.setA(100) })
     const solidLine = new SolidLine({ fillStyle: solidFill, thickness: 2 })
     return { solidFill, opaqueFill, solidLine }
 }
