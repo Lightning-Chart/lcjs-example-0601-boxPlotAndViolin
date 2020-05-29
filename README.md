@@ -60,17 +60,17 @@ Direct developer email support can be purchased through a [Support Plan][4] or b
 © Arction Ltd 2009-2020. All rights reserved.
 
 
-[ColorPalettes]: https://www.arction.com/lightningchart-js-api-documentation/v1.2.0/globals.html#colorpalettes
-[SolidFill]: https://www.arction.com/lightningchart-js-api-documentation/v1.2.0/classes/solidfill.html
-[SolidLine]: https://www.arction.com/lightningchart-js-api-documentation/v1.2.0/classes/solidline.html
-[ChartXY]: https://www.arction.com/lightningchart-js-api-documentation/v1.2.0/classes/chartxy.html
-[AutoCursorModes]: https://www.arction.com/lightningchart-js-api-documentation/v1.2.0/enums/autocursormodes.html
-[AutoCursorXY]: https://www.arction.com/lightningchart-js-api-documentation/v1.2.0/interfaces/autocursorxy.html
-[Axis]: https://www.arction.com/lightningchart-js-api-documentation/v1.2.0/classes/axis.html
-[AxisScrollStrategies]: https://www.arction.com/lightningchart-js-api-documentation/v1.2.0/globals.html#axisscrollstrategies
-[BoxSeries]: https://www.arction.com/lightningchart-js-api-documentation/v1.2.0/classes/boxseries.html
-[BoxAndWhiskers]: https://www.arction.com/lightningchart-js-api-documentation/v1.2.0/classes/boxandwhiskers.html
-[HorizontalLegendBox]: https://www.arction.com/lightningchart-js-api-documentation/v1.2.0/globals.html#legendboxbuilders.horizontallegendbox
-[UIDraggingModes]: https://www.arction.com/lightningchart-js-api-documentation/v1.2.0/enums/uidraggingmodes.html
-[UIOrigins]: https://www.arction.com/lightningchart-js-api-documentation/v1.2.0/globals.html#uiorigins
+[ColorPalettes]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/globals.html#colorpalettes
+[SolidFill]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/classes/solidfill.html
+[SolidLine]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/classes/solidline.html
+[ChartXY]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/classes/chartxy.html
+[AutoCursorModes]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/enums/autocursormodes.html
+[AutoCursorXY]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/interfaces/autocursorxy.html
+[Axis]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/classes/axis.html
+[AxisScrollStrategies]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/globals.html#axisscrollstrategies
+[BoxSeries]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/classes/boxseries.html
+[BoxAndWhiskers]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/classes/boxandwhiskers.html
+[HorizontalLegendBox]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/globals.html#legendboxbuilders.horizontallegendbox
+[UIDraggingModes]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/enums/uidraggingmodes.html
+[UIOrigins]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/globals.html#uiorigins
 
