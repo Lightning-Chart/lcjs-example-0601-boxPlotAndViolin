@@ -15,8 +15,10 @@ const {
     LegendBoxBuilders,
     UIDraggingModes,
     AxisScrollStrategies,
+    AxisTickStrategies,
     AutoCursorModes,
-    UIOrigins
+    UIOrigins,
+    Themes
 } = lcjs
 
 // Import data-generator from 'xydata'-library.
@@ -90,7 +92,9 @@ const probabilityDistribution = (mean, variance) =>
 //#endregion
 
 // Make chart with series graphing standard probability density and cumulative distribution functions.
-const chart = lightningChart().ChartXY()
+const chart = lightningChart().ChartXY({
+    // theme: Themes.dark 
+})
     .setTitle('Probability distribution + Simulated accumulation and BoxSeries')
     // Set auto-cursor mode to 'onHover'
     .setAutoCursorMode(AutoCursorModes.onHover)
@@ -110,21 +114,49 @@ const axisX = chart.getDefaultAxisX()
     .setInterval(xBounds.min, xBounds.max)
     .setScrollStrategy(undefined)
 
+// Set up the Distribution Axis.
 axisDistribution
     .setTitle('Distribution function')
     .setScrollStrategy(AxisScrollStrategies.expansion)
-    // Modify TickStyle to hide gridStrokes.
-    .setTickStyle(visibleTicks => visibleTicks
-        .setGridStrokeStyle(emptyLine)
+    // Modify the TickStrategy to remove gridLines from this Y Axis.
+    .setTickStrategy(
+        // Use Numeric TickStrategy as base.
+        AxisTickStrategies.Numeric,
+        // Use mutator to modify the TickStrategy.
+        tickStrategy => tickStrategy
+            // Modify Major Tick Style by using a mutator.
+            .setMajorTickStyle(
+                tickStyle => tickStyle
+                    .setGridStrokeStyle(emptyLine)
+            )
+            // Modify Minor Tick Style by using a mutator.
+            .setMinorTickStyle(
+                tickStyle => tickStyle
+                    .setGridStrokeStyle(emptyLine)
+            )
     )
 
+// Set up the Normalized Axis.
 axisNormalized
     .setTitle('Accumulated distribution (%)')
     .setInterval(0, 1)
     .setScrollStrategy(undefined)
-    // Modify TickStyle to hide gridStroke.
-    .setTickStyle(visibleTicks => visibleTicks
-        .setGridStrokeStyle(emptyLine)
+    // Modify the TickStrategy to remove gridLines from this Y Axis.
+    .setTickStrategy(
+        // Use Numeric TickStrategy as base.
+        AxisTickStrategies.Numeric,
+        // Use mutator to modify the TickStrategy.
+        tickStrategy => tickStrategy
+            // Modify Major Tick Style by using a mutator.
+            .setMajorTickStyle(
+                tickStyle => tickStyle
+                    .setGridStrokeStyle(emptyLine)
+            )
+            // Modify Minor Tick Style by using a mutator.
+            .setMinorTickStyle(
+                tickStyle => tickStyle
+                    .setGridStrokeStyle(emptyLine)
+            )
     )
 
 // Cumulative distribution.
@@ -133,7 +165,7 @@ const cumulativeDistributionSeries = chart.addAreaSeries({ yAxis: axisNormalized
     .setFillStyle(styles[0].opaqueFill)
     .setStrokeStyle(styles[0].solidLine)
 
-// probability distribution.
+// Probability distribution.
 const probabilityDistributionSeries = chart.addAreaSeries({ yAxis: axisDistribution })
     .setName('Probability Distribution')
     .setFillStyle(styles[1].opaqueFill)

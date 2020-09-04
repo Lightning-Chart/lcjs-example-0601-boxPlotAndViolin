@@ -24,19 +24,19 @@ This example shows usage of BoxSeries in extravagant manner.
 
 ## API Links
 
-* Color palettes: [ColorPalettes]
-* Solid FillStyle: [SolidFill]
-* Solid LineStyle: [SolidLine]
-* XY cartesian chart: [ChartXY]
-* cursor modes: [AutoCursorModes]
-* cursor: [AutoCursorXY]
-* Axis: [Axis]
-* Scroll strategies: [AxisScrollStrategies]
-* Box series: [BoxSeries]
-* Box and whiskers Figure: [BoxAndWhiskers]
-* Horizontal Legend box: [HorizontalLegendBox]
-* UI dragging modes: [UIDraggingModes]
-* UI position origins: [UIOrigins]
+* [Color palettes]
+* [Solid FillStyle]
+* [Solid LineStyle]
+* [XY cartesian chart]
+* [cursor modes]
+* [cursor]
+* [Axis]
+* [Scroll strategies]
+* [Box series]
+* [Box and whiskers Figure]
+* [Horizontal Legend box]
+* [UI dragging modes]
+* [UI position origins]
 
 
 ## Support
@@ -60,17 +60,17 @@ Direct developer email support can be purchased through a [Support Plan][4] or b
 © Arction Ltd 2009-2020. All rights reserved.
 
 
-[ColorPalettes]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/globals.html#colorpalettes
-[SolidFill]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/classes/solidfill.html
-[SolidLine]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/classes/solidline.html
-[ChartXY]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/classes/chartxy.html
-[AutoCursorModes]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/enums/autocursormodes.html
-[AutoCursorXY]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/interfaces/autocursorxy.html
-[Axis]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/classes/axis.html
-[AxisScrollStrategies]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/globals.html#axisscrollstrategies
-[BoxSeries]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/classes/boxseries.html
-[BoxAndWhiskers]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/classes/boxandwhiskers.html
-[HorizontalLegendBox]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/globals.html#legendboxbuilders.horizontallegendbox
-[UIDraggingModes]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/enums/uidraggingmodes.html
-[UIOrigins]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/globals.html#uiorigins
+[Color palettes]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/globals.html#colorpalettes
+[Solid FillStyle]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/classes/solidfill.html
+[Solid LineStyle]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/classes/solidline.html
+[XY cartesian chart]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/classes/chartxy.html
+[cursor modes]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/enums/autocursormodes.html
+[cursor]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/interfaces/autocursorxy.html
+[Axis]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/classes/axis.html
+[Scroll strategies]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/globals.html#axisscrollstrategies
+[Box series]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/classes/boxseries.html
+[Box and whiskers Figure]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/classes/boxandwhiskers.html
+[Horizontal Legend box]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/globals.html#legendboxbuilders.horizontallegendbox
+[UI dragging modes]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/enums/uidraggingmodes.html
+[UI position origins]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/globals.html#uiorigins
 
