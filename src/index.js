@@ -265,13 +265,10 @@ const graphDistribution = (mean, variance) => {
 graphDistribution(0, 1)
 
 // Add LegendBox as part of chart.
-const legend = chart.addLegendBox(LegendBoxBuilders.HorizontalLegendBox, { x: chart.uiScale.x, y: chart.pixelScale.y })
-    .setOrigin(UIOrigins.LeftBottom)
-    .setPosition({ x: 15, y: 250 })
-    .setDraggingMode(UIDraggingModes.freelyDraggable)
-legend.add(chart, 'Series')
+const legend = chart.addLegendBox(LegendBoxBuilders.HorizontalLegendBox )
+legend.add(chart)
 
-cumulativeDistributionSeries.setResultTableFormatter((tableBuilder, rangeSeries, position, high, low) => {
+cumulativeDistributionSeries.setCursorResultTableFormatter((tableBuilder, rangeSeries, position, high, low) => {
     const x = (position.toFixed(2) == '-0.00') ? '0.00' : position.toFixed(2);
     return tableBuilder
         .addRow('Simulated Cumulative Distribution')
@@ -279,7 +276,7 @@ cumulativeDistributionSeries.setResultTableFormatter((tableBuilder, rangeSeries,
         .addRow('High ' + high.toFixed(2))
         .addRow('Base ' + low.toFixed(2))
 })
-probabilityDistributionSeries.setResultTableFormatter((tableBuilder, rangeSeries, position, high, low) => {
+probabilityDistributionSeries.setCursorResultTableFormatter((tableBuilder, rangeSeries, position, high, low) => {
     const x = (position.toFixed(2) == '-0.00') ? '0.00' : position.toFixed(2);
     return tableBuilder
         .addRow('Probability Distribution')
@@ -287,7 +284,7 @@ probabilityDistributionSeries.setResultTableFormatter((tableBuilder, rangeSeries
         .addRow('Value ' + high.toFixed(2))
         .addRow('Base ' + low.toFixed(2))
 })
-violinSeries.setResultTableFormatter((tableBuilder, rangeSeries, position, high, low) => {
+violinSeries.setCursorResultTableFormatter((tableBuilder, rangeSeries, position, high, low) => {
     const x = (position.toFixed(2) == '-0.00') ? '0.00' : position.toFixed(2);
     return tableBuilder
         .addRow('Violin')
