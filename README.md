@@ -1,6 +1,6 @@
-# Box And Violin Chart
+# JavaScript Box And Violin Chart
 
-![Box And Violin Chart](boxPlotAndViolin.png)
+![JavaScript Box And Violin Chart](boxPlotAndViolin.png)
 
 This demo application belongs to the set of examples for LightningChart JS, data visualization library for JavaScript.
 
