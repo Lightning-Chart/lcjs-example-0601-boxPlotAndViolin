@@ -6,18 +6,13 @@ const lcjs = require('@arction/lcjs')
 
 // Extract required parts from LightningChartJS.
 const {
-    ColorPalettes,
-    SolidFill,
-    SolidLine,
     emptyLine,
     lightningChart,
     yDimensionStrategy,
     LegendBoxBuilders,
-    UIDraggingModes,
     AxisScrollStrategies,
     AxisTickStrategies,
     AutoCursorModes,
-    UIOrigins,
     Themes
 } = lcjs
 
@@ -25,18 +20,6 @@ const {
 const {
     createProgressiveFunctionGenerator
 } = require('@arction/xydata')
-
-// ----- Cache used styles -----
-const palette = ColorPalettes.arction(10)
-const colors = [2, 4, 0, 0].map(palette)
-const Style = (color) => {
-    const solidFill = new SolidFill({ color })
-    const opaqueFill = new SolidFill({ color: color.setA(100) })
-    const solidLine = new SolidLine({ fillStyle: solidFill, thickness: 2 })
-    return { solidFill, opaqueFill, solidLine }
-}
-const styles = colors.map(Style)
-const medianStrokeStyle = new SolidLine({ fillStyle: new SolidFill({ color: colors[3] }), thickness: 6 })
 
 // Utilities for graphing distribution functions.
 //#region
@@ -93,7 +76,7 @@ const probabilityDistribution = (mean, variance) =>
 
 // Make chart with series graphing standard probability density and cumulative distribution functions.
 const chart = lightningChart().ChartXY({
-    // theme: Themes.dark 
+    // theme: Themes.darkGold 
 })
     .setTitle('Probability distribution + Simulated accumulation and BoxSeries')
     // Set auto-cursor mode to 'onHover'
@@ -162,33 +145,18 @@ axisNormalized
 // Cumulative distribution.
 const cumulativeDistributionSeries = chart.addAreaSeries({ yAxis: axisNormalized })
     .setName('Simulated Cumulative Distribution')
-    .setFillStyle(styles[0].opaqueFill)
-    .setStrokeStyle(styles[0].solidLine)
 
 // Probability distribution.
 const probabilityDistributionSeries = chart.addAreaSeries({ yAxis: axisDistribution })
     .setName('Probability Distribution')
-    .setFillStyle(styles[1].opaqueFill)
-    .setStrokeStyle(styles[1].solidLine)
 
 // 'Violin' series.
 const violinSeries = chart.addAreaRangeSeries({ yAxis: axisDistribution })
     .setName('Violin')
-    .setHighFillStyle(styles[2].opaqueFill)
-    .setLowFillStyle(styles[2].opaqueFill)
-    .setHighStrokeStyle(styles[2].solidLine)
-    .setLowStrokeStyle(styles[2].solidLine)
 
 // Box series.
 const boxSeries = chart.addBoxSeries({ yAxis: axisDistribution, dimensionStrategy: yDimensionStrategy })
     .setName('Box')
-    .setDefaultStyle((boxAndWhiskers) => boxAndWhiskers
-        .setBodyFillStyle(styles[2].opaqueFill)
-        .setBodyStrokeStyle(styles[2].solidLine)
-        .setStrokeStyle(styles[2].solidLine)
-        .setMedianStrokeStyle(medianStrokeStyle)
-        .setTailWidth(0)
-    )
 
 // Drawing logic
 //#region
@@ -266,6 +234,11 @@ graphDistribution(0, 1)
 
 // Add LegendBox as part of chart.
 const legend = chart.addLegendBox(LegendBoxBuilders.HorizontalLegendBox )
+    // Dispose example UI elements automatically if they take too much space. This is to avoid bad UI on mobile / etc. devices.
+    .setAutoDispose({
+        type: 'max-width',
+        maxWidth: 0.80,
+    })
 legend.add(chart)
 
 cumulativeDistributionSeries.setCursorResultTableFormatter((tableBuilder, rangeSeries, position, high, low) => {
