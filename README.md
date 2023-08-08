@@ -60,17 +60,17 @@ Direct developer email support can be purchased through a [Support Plan][4] or b
 © LightningChart Ltd 2009-2022. All rights reserved.
 
 
-[Color palettes]: https://lightningchart.com/lightningchart-js-api-documentation/v4.1.0/variables/ColorPalettes.html
-[Solid FillStyle]: https://lightningchart.com/lightningchart-js-api-documentation/v4.1.0/classes/SolidFill.html
-[Solid LineStyle]: https://lightningchart.com/lightningchart-js-api-documentation/v4.1.0/classes/SolidLine.html
-[XY cartesian chart]: https://lightningchart.com/lightningchart-js-api-documentation/v4.1.0/classes/ChartXY.html
-[cursor modes]: https://lightningchart.com/lightningchart-js-api-documentation/v4.1.0/enums/AutoCursorModes.html
-[cursor]: https://lightningchart.com/lightningchart-js-api-documentation/v4.1.0/interfaces/AutoCursorXY.html
-[Axis]: https://lightningchart.com/lightningchart-js-api-documentation/v4.1.0/classes/Axis.html
-[Scroll strategies]: https://lightningchart.com/lightningchart-js-api-documentation/v4.1.0/variables/AxisScrollStrategies.html
-[Box series]: https://lightningchart.com/lightningchart-js-api-documentation/v4.1.0/classes/BoxSeries.html
-[Box and whiskers Figure]: https://lightningchart.com/lightningchart-js-api-documentation/v4.1.0/classes/BoxAndWhiskers.html
-[Horizontal Legend box]: https://lightningchart.com/lightningchart-js-api-documentation/v4.1.0/variables/LegendBoxBuilders.html
-[UI dragging modes]: https://lightningchart.com/lightningchart-js-api-documentation/v4.1.0/enums/UIDraggingModes.html
-[UI position origins]: https://lightningchart.com/lightningchart-js-api-documentation/v4.1.0/variables/UIOrigins.html
+[Color palettes]: https://lightningchart.com/js-charts/api-documentation/v4.2.0/variables/ColorPalettes.html
+[Solid FillStyle]: https://lightningchart.com/js-charts/api-documentation/v4.2.0/classes/SolidFill.html
+[Solid LineStyle]: https://lightningchart.com/js-charts/api-documentation/v4.2.0/classes/SolidLine.html
+[XY cartesian chart]: https://lightningchart.com/js-charts/api-documentation/v4.2.0/classes/ChartXY.html
+[cursor modes]: https://lightningchart.com/js-charts/api-documentation/v4.2.0/enums/AutoCursorModes.html
+[cursor]: https://lightningchart.com/js-charts/api-documentation/v4.2.0/interfaces/AutoCursorXY.html
+[Axis]: https://lightningchart.com/js-charts/api-documentation/v4.2.0/classes/Axis.html
+[Scroll strategies]: https://lightningchart.com/js-charts/api-documentation/v4.2.0/variables/AxisScrollStrategies.html
+[Box series]: https://lightningchart.com/js-charts/api-documentation/v4.2.0/classes/BoxSeries.html
+[Box and whiskers Figure]: https://lightningchart.com/js-charts/api-documentation/v4.2.0/classes/BoxAndWhiskers.html
+[Horizontal Legend box]: https://lightningchart.com/js-charts/api-documentation/v4.2.0/variables/LegendBoxBuilders.html
+[UI dragging modes]: https://lightningchart.com/js-charts/api-documentation/v4.2.0/enums/UIDraggingModes.html
+[UI position origins]: https://lightningchart.com/js-charts/api-documentation/v4.2.0/variables/UIOrigins.html
 
