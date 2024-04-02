@@ -63,7 +63,7 @@ const probabilityDistribution = (mean, variance) => (x) =>
 // Make chart with series graphing standard probability density and cumulative distribution functions.
 const chart = lightningChart()
     .ChartXY({
-        theme: Themes[new URLSearchParams(window.location.search).get('theme') || 'darkGold'] || undefined
+        theme: Themes[new URLSearchParams(window.location.search).get('theme') || 'darkGold'] || undefined,
     })
     .setTitle('Probability distribution + Simulated accumulation and BoxSeries')
     // Set auto-cursor mode to 'onHover'
