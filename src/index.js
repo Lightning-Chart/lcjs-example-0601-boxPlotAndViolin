@@ -2,10 +2,10 @@
  * LightningChartJS example that showcases usage of BoxSeries and RangeSeries to show some made-up statistical graphs.
  */
 // Import LightningChartJS
-const lcjs = require('@arction/lcjs')
+const lcjs = require('@lightningchart/lcjs')
 
 // Import xydata
-const xydata = require('@arction/xydata')
+const xydata = require('@lightningchart/xydata')
 
 // Extract required parts from LightningChartJS.
 const {
@@ -68,11 +68,7 @@ const chart = lightningChart({
         theme: Themes[new URLSearchParams(window.location.search).get('theme') || 'darkGold'] || undefined,
     })
     .setTitle('Probability distribution + Simulated accumulation and BoxSeries')
-    // Set auto-cursor mode to 'onHover'
-    .setAutoCursorMode(AutoCursorModes.onHover)
-    .setAutoCursor((cursor) =>
-        cursor.setResultTableAutoTextStyle(false).setTickMarkerXAutoTextStyle(false).setTickMarkerYAutoTextStyle(false),
-    )
+    .setCursorMode('show-pointed')
     .setPadding({ right: 20 })
 
 const xBounds = { min: -4, max: 4 }
@@ -214,28 +210,3 @@ const legend = chart
         maxWidth: 0.8,
     })
 legend.add(chart)
-
-cumulativeDistributionSeries.setCursorResultTableFormatter((tableBuilder, rangeSeries, position, high, low) => {
-    const x = position.toFixed(2) == '-0.00' ? '0.00' : position.toFixed(2)
-    return tableBuilder
-        .addRow('Simulated Cumulative Distribution')
-        .addRow('Position ' + x)
-        .addRow('High ' + high.toFixed(2))
-        .addRow('Base ' + low.toFixed(2))
-})
-probabilityDistributionSeries.setCursorResultTableFormatter((tableBuilder, rangeSeries, position, high, low) => {
-    const x = position.toFixed(2) == '-0.00' ? '0.00' : position.toFixed(2)
-    return tableBuilder
-        .addRow('Probability Distribution')
-        .addRow('Position ' + x)
-        .addRow('Value ' + high.toFixed(2))
-        .addRow('Base ' + low.toFixed(2))
-})
-violinSeries.setCursorResultTableFormatter((tableBuilder, rangeSeries, position, high, low) => {
-    const x = position.toFixed(2) == '-0.00' ? '0.00' : position.toFixed(2)
-    return tableBuilder
-        .addRow('Violin')
-        .addRow('Position ' + x)
-        .addRow('Value ' + high.toFixed(2))
-        .addRow('Low ' + low.toFixed(2))
-})
