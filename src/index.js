@@ -117,10 +117,14 @@ axisNormalized
     )
 
 // Cumulative distribution.
-const cumulativeDistributionSeries = chart.addAreaSeries({ yAxis: axisNormalized }).setName('Simulated Cumulative Distribution')
+const cumulativeDistributionSeries = chart
+    .addPointLineAreaSeries({ yAxis: axisNormalized, dataPattern: 'ProgressiveX' })
+    .setName('Simulated Cumulative Distribution')
 
 // Probability distribution.
-const probabilityDistributionSeries = chart.addAreaSeries({ yAxis: axisDistribution }).setName('Probability Distribution')
+const probabilityDistributionSeries = chart
+    .addPointLineAreaSeries({ yAxis: axisDistribution, dataPattern: 'ProgressiveX' })
+    .setName('Probability Distribution')
 
 // 'Violin' series.
 const violinSeries = chart.addAreaRangeSeries({ yAxis: axisDistribution }).setName('Violin')
