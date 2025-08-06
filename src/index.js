@@ -12,9 +12,9 @@ const {
     emptyLine,
     lightningChart,
     yDimensionStrategy,
-    LegendBoxBuilders,
     AxisScrollStrategies,
     AxisTickStrategies,
+    LegendPosition,
     AutoCursorModes,
     Themes,
 } = lcjs
@@ -65,6 +65,9 @@ const chart = lightningChart({
             resourcesBaseUrl: new URL(document.head.baseURI).origin + new URL(document.head.baseURI).pathname + 'resources/',
         })
     .ChartXY({
+        legend: { 
+            position: LegendPosition.TopRight,
+        },
         theme: Themes[new URLSearchParams(window.location.search).get('theme') || 'darkGold'] || undefined,
     })
     .setTitle('Probability distribution + Simulated accumulation and BoxSeries')
@@ -117,14 +120,10 @@ axisNormalized
     )
 
 // Cumulative distribution.
-const cumulativeDistributionSeries = chart
-    .addPointLineAreaSeries({ yAxis: axisNormalized, dataPattern: 'ProgressiveX' })
-    .setName('Simulated Cumulative Distribution')
+const cumulativeDistributionSeries = chart.addPointLineAreaSeries({ yAxis: axisNormalized }).setName('Simulated Cumulative Distribution')
 
 // Probability distribution.
-const probabilityDistributionSeries = chart
-    .addPointLineAreaSeries({ yAxis: axisDistribution, dataPattern: 'ProgressiveX' })
-    .setName('Probability Distribution')
+const probabilityDistributionSeries = chart.addPointLineAreaSeries({ yAxis: axisDistribution }).setName('Probability Distribution')
 
 // 'Violin' series.
 const violinSeries = chart.addAreaRangeSeries({ yAxis: axisDistribution }).setName('Violin')
@@ -159,7 +158,7 @@ const graphDistribution = (mean, variance) => {
         .setStreamBatchSize((1000 * (xBounds.max - xBounds.min)) / (step * streamInterval * streamDuration))
         .setStreamInterval(streamInterval)
         .toStream()
-        .forEach((point) => cumulativeDistributionSeries.add(point))
+        .forEach((point) => cumulativeDistributionSeries.appendSample(point))
     createProgressiveFunctionGenerator()
         .setSamplingFunction(probabilityDistributionFunction)
         .setStart(xBounds.min)
@@ -170,7 +169,7 @@ const graphDistribution = (mean, variance) => {
         .setStreamInterval(streamInterval)
         .toStream()
         .forEach((point) => {
-            probabilityDistributionSeries.add(point)
+            probabilityDistributionSeries.appendSample(point)
             if (point.y >= 0.001)
                 // Add mirrored area-point to violin point
                 violinSeries.add({
@@ -205,12 +204,3 @@ const graphDistribution = (mean, variance) => {
 
 graphDistribution(0, 1)
 
-// Add LegendBox as part of chart.
-const legend = chart
-    .addLegendBox(LegendBoxBuilders.HorizontalLegendBox)
-    // Dispose example UI elements automatically if they take too much space. This is to avoid bad UI on mobile / etc. devices.
-    .setAutoDispose({
-        type: 'max-width',
-        maxWidth: 0.8,
-    })
-legend.add(chart)
