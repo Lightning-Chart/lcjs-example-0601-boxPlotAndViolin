@@ -55,18 +55,18 @@ Direct developer email support can be purchased through a [Support Plan][4] or b
 [3]: https://stackoverflow.com/questions/tagged/lightningchart
 [4]: https://lightningchart.com/support-services/
 
-© LightningChart Ltd 2009-2025. All rights reserved.
+© LightningChart Ltd 2009-2026. All rights reserved.
 
 
-[Color palettes]: https://lightningchart.com/js-charts/api-documentation/v8.1.0/variables/ColorPalettes.html
-[Solid FillStyle]: https://lightningchart.com/js-charts/api-documentation/v8.1.0/classes/SolidFill.html
-[Solid LineStyle]: https://lightningchart.com/js-charts/api-documentation/v8.1.0/classes/SolidLine.html
-[XY cartesian chart]: https://lightningchart.com/js-charts/api-documentation/v8.1.0/classes/ChartXY.html
-[cursor modes]: https://lightningchart.com/js-charts/api-documentation/v8.1.0/interfaces/ChartWithCursor.html#setCursorMode
-[cursor]: https://lightningchart.com/js-charts/api-documentation/v8.1.0/classes/CursorXY.html
-[Axis]: https://lightningchart.com/js-charts/api-documentation/v8.1.0/classes/Axis.html
-[Scroll strategies]: https://lightningchart.com/js-charts/api-documentation/v8.1.0/variables/AxisScrollStrategies.html
-[Box series]: https://lightningchart.com/js-charts/api-documentation/v8.1.0/classes/BoxSeries.html
-[UI dragging modes]: https://lightningchart.com/js-charts/api-documentation/v8.1.0/enums/UIDraggingModes.html
-[UI position origins]: https://lightningchart.com/js-charts/api-documentation/v8.1.0/variables/UIOrigins.html
+[Color palettes]: https://lightningchart.com/js-charts/api-documentation/v8.2.0/variables/ColorPalettes.html
+[Solid FillStyle]: https://lightningchart.com/js-charts/api-documentation/v8.2.0/classes/SolidFill.html
+[Solid LineStyle]: https://lightningchart.com/js-charts/api-documentation/v8.2.0/classes/SolidLine.html
+[XY cartesian chart]: https://lightningchart.com/js-charts/api-documentation/v8.2.0/classes/ChartXY.html
+[cursor modes]: https://lightningchart.com/js-charts/api-documentation/v8.2.0/interfaces/ChartWithCursor.html#setCursorMode
+[cursor]: https://lightningchart.com/js-charts/api-documentation/v8.2.0/classes/CursorXY.html
+[Axis]: https://lightningchart.com/js-charts/api-documentation/v8.2.0/classes/Axis.html
+[Scroll strategies]: https://lightningchart.com/js-charts/api-documentation/v8.2.0/variables/AxisScrollStrategies.html
+[Box series]: https://lightningchart.com/js-charts/api-documentation/v8.2.0/classes/BoxSeries.html
+[UI dragging modes]: https://lightningchart.com/js-charts/api-documentation/v8.2.0/enums/UIDraggingModes.html
+[UI position origins]: https://lightningchart.com/js-charts/api-documentation/v8.2.0/variables/UIOrigins.html
 
