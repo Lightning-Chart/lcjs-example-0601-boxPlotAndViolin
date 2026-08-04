@@ -9,16 +9,8 @@ const lcjs = require('@lightningchart/lcjs')
 const xydata = require('@lightningchart/xydata')
 
 // Extract required parts from LightningChartJS.
-const {
-    emptyLine,
-    lightningChart,
-    yDimensionStrategy,
-    AxisScrollStrategies,
-    AxisTickStrategies,
-    LegendPosition,
-    AutoCursorModes,
-    Themes,
-} = lcjs
+const { emptyLine, lightningChart, yDimensionStrategy, AxisScrollStrategies, AxisTickStrategies, LegendPosition, AutoCursorModes, Themes } =
+    lcjs
 
 // Import data-generator from 'xydata'-library.
 const { createProgressiveFunctionGenerator } = xydata
@@ -66,7 +58,7 @@ const chart = lightningChart({
             resourcesBaseUrl: new URL(document.head.baseURI).origin + new URL(document.head.baseURI).pathname + 'resources/',
         })
     .ChartXY({
-        legend: { 
+        legend: {
             position: LegendPosition.TopRight,
         },
         theme: (() => {
@@ -177,7 +169,7 @@ const graphDistribution = (mean, variance) => {
             probabilityDistributionSeries.appendSample(point)
             if (point.y >= 0.001)
                 // Add mirrored area-point to violin point
-                violinSeries.add({
+                violinSeries.appendJSON({
                     position: point.x,
                     high: 1.0 + point.y / 2,
                     low: 1.0 - point.y / 2,
@@ -208,4 +200,3 @@ const graphDistribution = (mean, variance) => {
 //#endregion
 
 graphDistribution(0, 1)
-
